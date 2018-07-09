@@ -1,11 +1,15 @@
-var y = (new Date()).getFullYear();
-var leapYear;
+var y = (new Date()).getFullYear(); // This line of code gets the cuurent year and stores it in a variable called y.
+
+var leapYear; // This variable will be used later on in the code as a boolean to state wheher or not the current year is a leap year.
+
 function setup () {
-  createCanvas(screen.width, screen.height);
-  console.log(y);
+  createCanvas(screen.width, screen.height); // This is the interface on which the user of the weppage will see the result of whether the current year is a loop year or not.
 }
 
 function draw () {
+  // The chunk of code below checks to see if the current year is not
+  // divisible by 4 and if that is true then it is not a leap year.
+
   if (y % 4 != 0) {
     leapYear = false;
   }
