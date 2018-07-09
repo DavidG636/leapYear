@@ -8,13 +8,14 @@ function setup () {
 
 function draw () {
   // The chunk of code below checks to see if the current year is not
-  // divisible by 4 and if that is true then it is not a leap year.
+  // divisible by the numbers 4, 100, and 400 and the outcome of those
+  // operations determines whether or not the year is a leap year.
 
   if (y % 4 != 0) {
-    leapYear = false;
+    leapYear = false; // this makes the variable called leapYear false which means that the year is not a leap year.
   }
   else if (y % 100 != 0) {
-    leapYear = true;
+    leapYear = true; // this makes the variable called leapYear true which means that the year is a leap year.
   }
   else if (y % 400 != 0) {
     leapYear = false;
@@ -25,11 +26,11 @@ function draw () {
   textSize(20);
 
   if (leapYear) {
-    background("red");
-    text("The year we are in now: " + y.toString() + " is a leap year.", width/2, height/2);
+    background("red"); // this makes the background color of the canvas/drawing board red.
+    text("The year we are in now: " + y.toString() + " is a leap year.", width/2, height/2); // this makes the text in the parentheses as well as the current year appear as text in the middle of the canvas.
   }
   else {
-    background("green");
+    background("green");  // this makes the background color of the canvas/drawing board green.
     text("The year we are in now: " + y.toString() + " is not a leap year.", width/2, height/2)
   }
 }
